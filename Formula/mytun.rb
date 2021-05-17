@@ -5,25 +5,25 @@
 class Mytun < Formula
   desc "MyTun.net - Expose any Port securely on internet"
   homepage "https://dashboard.mytun.net/"
-  version "1.3.11"
+  version "1.3.12"
   license "BSD 3-Clause License"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/mytunnet/homebew-mytun/releases/v1.3.11/mytun_1.3.11_darwin_amd64.tar.gz", :using => CurlDownloadStrategy.
-    sha256 "6e5fa66f5b3692dc676e11ca14745632117ea9b0c3993c0eae61e233df757bf4"
+    url "https://github.com/mytunnet/homebew-mytun/releases/v1.3.12/mytun_1.3.12_darwin_amd64.tar.gz", :using => CurlDownloadStrategy.
+    sha256 "5709d5b3efcd704b7d1fd6490dd33725c23cea115fce5b43801e62bfef1c3c8b"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/mytunnet/homebew-mytun/releases/v1.3.11/mytun_1.3.11_darwin_arm64.tar.gz", :using => CurlDownloadStrategy.
-    sha256 "112761d4c48128e856edb1b6ab470c5835e2aa8804ca339997645b8f3811a183"
+    url "https://github.com/mytunnet/homebew-mytun/releases/v1.3.12/mytun_1.3.12_darwin_arm64.tar.gz", :using => CurlDownloadStrategy.
+    sha256 "417fbab33f9a511c6491323149707ab7736ff71297e82d06350ea0291b2fe614"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/mytunnet/homebew-mytun/releases/v1.3.11/mytun_1.3.11_linux_amd64.tar.gz", :using => CurlDownloadStrategy.
-    sha256 "9c2393ecedc7d34a7777e4f70331a078c94fdcfbce80b31c8fd201e57082cc96"
+    url "https://github.com/mytunnet/homebew-mytun/releases/v1.3.12/mytun_1.3.12_linux_amd64.tar.gz", :using => CurlDownloadStrategy.
+    sha256 "f4069ce51488ffea6e89ddf7b3876869f248e7b39612091670049627b50d41d0"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/mytunnet/homebew-mytun/releases/v1.3.11/mytun_1.3.11_linux_arm64.tar.gz", :using => CurlDownloadStrategy.
-    sha256 "e05f7c83840ccd78dfd8c96caaaed95edd07297191c1d97ce6295f5f0f11da55"
+    url "https://github.com/mytunnet/homebew-mytun/releases/v1.3.12/mytun_1.3.12_linux_arm64.tar.gz", :using => CurlDownloadStrategy.
+    sha256 "5f1fd2587a51bfc7bede1701f47b4ce8147cc0ea730dc3179d47a3c63618dc8f"
   end
 
   def install
