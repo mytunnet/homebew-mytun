@@ -5,25 +5,25 @@
 class Mytun < Formula
   desc "MyTun.net - Expose any Port securely on internet"
   homepage "https://dashboard.mytun.net/"
-  version "1.3.13"
+  version "1.3.14"
   license "BSD 3-Clause License"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/mytunnet/homebew-mytun/releases/v1.3.13/mytun_1.3.13_darwin_amd64.tar.gz"
-    sha256 "cabdc32765b7ba7e67d543aef8a26b4e0ab365730eaa196c767471dfd5d19963"
+    url "https://github.com/mytunnet/homebew-mytun/releases/download/v1.3.14/mytun_1.3.14_darwin_amd64.tar.gz"
+    sha256 "51e0584a51c86492af112070a221da37be8cb5788238a2e54e9add336c662db1"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/mytunnet/homebew-mytun/releases/v1.3.13/mytun_1.3.13_darwin_arm64.tar.gz"
-    sha256 "73e7d9323f056e0ae96a71f0cd4ee48e99581238218179f11ad99c6ddd9f4233"
+    url "https://github.com/mytunnet/homebew-mytun/releases/download/v1.3.14/mytun_1.3.14_darwin_arm64.tar.gz"
+    sha256 "d76036ec52b8d621958301dcec36fc27c8280be9a71639f5ff8eab51f77f8486"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/mytunnet/homebew-mytun/releases/v1.3.13/mytun_1.3.13_linux_amd64.tar.gz"
-    sha256 "e6f19ff9fcb444fbfc3c20e67c1f0aa9ad966dddf3d9d3611c7049ac4caebb3a"
+    url "https://github.com/mytunnet/homebew-mytun/releases/download/v1.3.14/mytun_1.3.14_linux_amd64.tar.gz"
+    sha256 "bf0ba5bde2243d557ff8fdf3eb2b14c10f69f33286499163ffa7bbea1330e15b"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/mytunnet/homebew-mytun/releases/v1.3.13/mytun_1.3.13_linux_arm64.tar.gz"
-    sha256 "91dd13c77ea1833099068750856cd09e5f2125a24fad735982250a17ca09320e"
+    url "https://github.com/mytunnet/homebew-mytun/releases/download/v1.3.14/mytun_1.3.14_linux_arm64.tar.gz"
+    sha256 "4606f5b80fa7f19cc050cec01813b24bd2d2cd0d6ba3a9091503dd0539d90fd5"
   end
 
   def install
