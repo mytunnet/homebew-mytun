@@ -5,29 +5,29 @@
 class Mytun < Formula
   desc "MyTun.net - Expose any Port securely on internet"
   homepage "https://dashboard.mytun.net/"
-  version "1.3.34"
+  version "1.3.40"
   license "BSD 3-Clause License"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/mytunnet/homebew-mytun/releases/download/1.3.34/mytun_1.3.34_darwin_amd64.tar.gz"
-    sha256 "86bb14f55f7e77bcd06123e67cc0f75293fc2e3609de674c2e00b5041a99f5ac"
+    url "https://github.com/mytunnet/homebew-mytun/releases/download/1.3.40/mytun_1.3.40_darwin_amd64.tar.gz"
+    sha256 "5bf25e1206baf35d90acf5ebf7bc128a0d18b235963f1fcd6ea9ba1bef686db4"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/mytunnet/homebew-mytun/releases/download/1.3.34/mytun_1.3.34_darwin_arm64.tar.gz"
-    sha256 "9f8c36f2627d38b7fbdc4a4f10a77b522888857d7ef8f33d64abdba7b86da5ad"
+    url "https://github.com/mytunnet/homebew-mytun/releases/download/1.3.40/mytun_1.3.40_darwin_arm64.tar.gz"
+    sha256 "1389e3cf2b176cd1827638c1a6ac1c4103e862fe3bee91f3c68405fc10ff2ba0"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/mytunnet/homebew-mytun/releases/download/1.3.34/mytun_1.3.34_linux_amd64.tar.gz"
-    sha256 "c293207f8dca0036dab59f042f144e0f3222cdc7f78282e2244c52b625a569d3"
+    url "https://github.com/mytunnet/homebew-mytun/releases/download/1.3.40/mytun_1.3.40_linux_amd64.tar.gz"
+    sha256 "4846913e5bd54cb9f307b683585a784e7f055e2be9e7fb829d8792386173fcd0"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/mytunnet/homebew-mytun/releases/download/1.3.34/mytun_1.3.34_linux_arm.tar.gz"
-    sha256 "b0d8ec18121a266f489b7883cfca9b324306e7058e52c6147c4347a79a521a06"
+    url "https://github.com/mytunnet/homebew-mytun/releases/download/1.3.40/mytun_1.3.40_linux_arm.tar.gz"
+    sha256 "c0ec9fbd9d58e0b41208c99d0a05163dc1059892a3d23eacbe3151f5cf1b3fff"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/mytunnet/homebew-mytun/releases/download/1.3.34/mytun_1.3.34_linux_arm64.tar.gz"
-    sha256 "543711c29d392096310090eb474b58d9824f4000adedb80530ca6a45de96eade"
+    url "https://github.com/mytunnet/homebew-mytun/releases/download/1.3.40/mytun_1.3.40_linux_arm64.tar.gz"
+    sha256 "dd892ffd9b1f387fd01b9a8efb640a1db9007bae611a0ba28e120eb97ffb00c3"
   end
 
   def install
