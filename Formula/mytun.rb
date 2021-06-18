@@ -5,29 +5,34 @@
 class Mytun < Formula
   desc "MyTun.net - Expose any Port securely on internet"
   homepage "https://dashboard.mytun.net/"
-  version "1.3.42"
+  version "1.3.45"
   license "BSD 3-Clause License"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/mytunnet/homebew-mytun/releases/download/1.3.42/mytun_1.3.42_darwin_amd64.tar.gz"
-    sha256 "0b7f1afe2cc55a357154f33a377ee23a659b354642d449239413d5ec51be7a97"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/mytunnet/homebew-mytun/releases/download/1.3.45/mytun_1.3.45_darwin_amd64.tar.gz"
+      sha256 "e323e4a75480d9135c3a491bf6f4cb73dbc3a4827e2c3b9adc1c6178af801b19"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/mytunnet/homebew-mytun/releases/download/1.3.45/mytun_1.3.45_darwin_arm64.tar.gz"
+      sha256 "f5c4681f6020c7d46899aec3bb53f33c28980d54f2ead1913d22e98b0b7f876f"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/mytunnet/homebew-mytun/releases/download/1.3.42/mytun_1.3.42_darwin_arm64.tar.gz"
-    sha256 "2cfdb6b0716b7ba695bdaa5b7797c06367293fe68d652978de047695954b5116"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/mytunnet/homebew-mytun/releases/download/1.3.42/mytun_1.3.42_linux_amd64.tar.gz"
-    sha256 "cb7dc185b0e1f09036a588f60dc72bc065ce6784449455a936467b66653db04e"
-  end
-  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/mytunnet/homebew-mytun/releases/download/1.3.42/mytun_1.3.42_linux_arm.tar.gz"
-    sha256 "bc6fcbe5a58d4821fdc824077167fa7079ae11ff83622f66b42248755b32791d"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/mytunnet/homebew-mytun/releases/download/1.3.42/mytun_1.3.42_linux_arm64.tar.gz"
-    sha256 "841d2dd670fbd93a48b80065d69b526fd929d29363dcae40c924a2d4c2205f8c"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/mytunnet/homebew-mytun/releases/download/1.3.45/mytun_1.3.45_linux_amd64.tar.gz"
+      sha256 "704df073431166ac54caa7dc8ca700282310d1c0ae0ec804c6d7de9bfa8dd239"
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/mytunnet/homebew-mytun/releases/download/1.3.45/mytun_1.3.45_linux_arm.tar.gz"
+      sha256 "4c98000605f3810aa46d5f86b68d54b671043714cc5206816f048b950bb8d624"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/mytunnet/homebew-mytun/releases/download/1.3.45/mytun_1.3.45_linux_arm64.tar.gz"
+      sha256 "dc271f90af24dd04d8d8435c5a568541e552d3d4b4f88e27fbaa6b02ffd3041f"
+    end
   end
 
   def install
