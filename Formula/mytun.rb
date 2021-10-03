@@ -5,33 +5,33 @@
 class Mytun < Formula
   desc "MyTun.net - Expose any Port securely on internet"
   homepage "https://dashboard.mytun.net/"
-  version "1.3.47"
+  version "1.3.48"
   license "BSD 3-Clause License"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mytunnet/homebew-mytun/releases/download/1.3.47/mytun_1.3.47_darwin_amd64.tar.gz"
-      sha256 "95a109f7d675ccb5ee2a485e0957fd82cc4470f1f8bea6143a318b529b92eca3"
+      url "https://github.com/mytunnet/homebew-mytun/releases/download/1.3.48/mytun_1.3.48_darwin_amd64.tar.gz"
+      sha256 "b7102878733a5ce422419a4c8414e654b96c9768e11c1b9c7c5430d2546da584"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mytunnet/homebew-mytun/releases/download/1.3.47/mytun_1.3.47_darwin_arm64.tar.gz"
-      sha256 "b76feca405944834f8562f7af7384e0dd5b44d0ea17fbc6d83e854985bb15b0f"
+      url "https://github.com/mytunnet/homebew-mytun/releases/download/1.3.48/mytun_1.3.48_darwin_arm64.tar.gz"
+      sha256 "593640360cfd452a76786c40d30f2dc127bbd30d3ef24811cee8e7401a53d4d3"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/mytunnet/homebew-mytun/releases/download/1.3.47/mytun_1.3.47_linux_amd64.tar.gz"
-      sha256 "ec7f71684c41a7c73809208a1dcc889451e02f98fce5447dcefbcb60531450fe"
+      url "https://github.com/mytunnet/homebew-mytun/releases/download/1.3.48/mytun_1.3.48_linux_amd64.tar.gz"
+      sha256 "259a8a661c4a849b8cc6acdcddccb0843982d3f82848d9424654f1bd3708cbdd"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/mytunnet/homebew-mytun/releases/download/1.3.47/mytun_1.3.47_linux_arm.tar.gz"
-      sha256 "353b56762258179dc6694f5a689fce1536a6467ea7e7257ad2a4b6a4c7f0fef9"
+      url "https://github.com/mytunnet/homebew-mytun/releases/download/1.3.48/mytun_1.3.48_linux_arm.tar.gz"
+      sha256 "f11194dde3e68e0d3051e05dd58187cbdc43085b2dbe6f92318f3f7518060bf8"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mytunnet/homebew-mytun/releases/download/1.3.47/mytun_1.3.47_linux_arm64.tar.gz"
-      sha256 "09cf8eacc206e8e1e52896902906bdf7b3da62ab5d8576ea1b18dd1be1df1ad3"
+      url "https://github.com/mytunnet/homebew-mytun/releases/download/1.3.48/mytun_1.3.48_linux_arm64.tar.gz"
+      sha256 "38c31a5301fb2c4003ce779a220bc361cf2b488159cb6db61c4fdd6931583b7a"
     end
   end
 
